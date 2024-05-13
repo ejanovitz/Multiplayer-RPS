@@ -1,4 +1,4 @@
-This is a copy of the original Final Project I was apart of, github repo importing isn't working so this is just my work around.
+# This is a copy of the original Final Project I was apart of, github repo importing isn't working so this is just my work around.
 
 # Final - Rock Paper Scissors with Web Chat Server Addition
 
