@@ -1,0 +1,148 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Rock Paper Scissors</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/game.css">
+
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<!-- Add your site or application content here -->
+<header class="top-bar">
+  <h1>Rock Paper Scissors</h1>
+</header>
+
+<nav class="navigation">
+  <nav class="navigation">
+    <a href="index.html"><button id="button1" class="active">Game</button></a>
+    <a href="about.html"><button id="button2">About</button></a>
+  </nav>
+</nav>
+
+<div class="container">
+
+  <!-- Left Panel -->
+  <div class="left-panel">
+    <h2>Available Game</h2>
+    <p>Select an available game to join, or create a new one.</p>
+    <button id="button-join" class="active" onclick="createNewRoom()">Create New Gameroom</button>
+    <button id="button-refresh" class="active" onclick="onRefreshButtons()">Refresh</button>
+    <!-- List of chat rooms -->
+    <div id="chat-room-list">
+        <!-- Chat room codes and join buttons will be dynamically added here -->
+    </div>
+  </div>
+
+  <!-- Middle Panel -->
+  <div class="middle-panel">
+<!--    <button class="exit-button">Exit</button>-->
+    <div class="rps-header">
+      <h1 id="gameStatus">Please join a room...</h1>
+    </div>
+
+    <!-- Select Move -->
+    <div class="content-block" id="content1">
+      <div class="rps-header">
+<!--        <h1>Please Select Your Move</h1>-->
+      </div>
+      <div class="rps-options">
+        <div class="rps-option" id="rock">
+          <img src="images/rock.png" alt="Rock">
+        </div>
+        <div class="rps-option" id="paper">
+          <img src="images/paper.png" alt="Paper">
+        </div>
+        <div class="rps-option" id="scissors">
+          <img src="images/scissors.png" alt="Scissors">
+        </div>
+      </div>
+      <div class="rps-header">
+        <h2 id="selectedMoveHeader">Selected: None</h2>
+      </div>
+      <button class="rps-confirm" id="rps-confirm">Confirm</button>
+    </div>
+
+    <!-- Player Vs Player -->
+    <div class="content-block" id="content2">
+      <div class="player-selection">
+        <div class="player1">
+          <h3>Player1</h3>
+          <img src="images/scissors.png" id="plr1img" alt="Player1">
+          <h3 id="plr1txt">Scissors</h3>
+        </div>
+        <div class="vs">
+          <img src="images/vs.png" alt="Versus">
+        </div>
+        <div class="player2">
+          <h3>Player2</h3>
+          <img src="images/paper.png" id="plr2img" alt="Player2">
+          <h3 id="plr2txt">Paper</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Player Won -->
+    <div class="content-block" id="content3">
+      <div class="rps-header">
+<!--        <h1>User Player1 Has Won!</h1>-->
+      </div>
+      <div class="winner-announcement">
+        <img id="winnerChoiceImage" src="images/scissors.png" alt="Winner's Choice">
+      </div>
+      <button class="rps-confirm">Play Again</button>
+    </div>
+
+  </div>
+
+
+  <!-- Right Panel -->
+  <div class="right-panel">
+
+    <div class="room-info">
+      <h2 id="room-text">You are in Room:</h2>
+        <button id="leaveButton" onclick="leave(); leaveGame();">Leave</button>
+    </div>
+
+    <div id="chat-container" class="chat-container">
+      <!-- Messages Will Append Here -->
+      <textarea id="textarea" readonly></textarea>
+      <div class="input-bar">
+        <input title="Chat Input" id="input" type="text" placeholder="Type your message...">
+        <button id="sendButton">Send</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="copyright">
+  <p>Copyright &copy; CSCI 2020U - Winter 2024</p>
+</footer>
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="js/game.js"></script>
+
+</body>
+
+</html>

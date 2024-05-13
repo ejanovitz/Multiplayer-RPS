@@ -1,0 +1,130 @@
+.content-block {
+    display: none;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+#content1 {
+    display: none;
+}
+
+#content2 {
+    display: none;
+}
+
+#content3 {
+    display: none;
+}
+
+#content2 .player-selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2vw;
+    text-shadow: 0.5vw 0.5vw 5px #000000;
+}
+
+.player-selection .player1,
+.player-selection .player2 {
+    flex: 1;
+    margin: 20px;
+}
+
+.player-selection .vs {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.player-selection img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.winner-announcement img {
+    max-width: 65%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.rps-header {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 0.5vw 0.5vw 5px #000000;
+}
+
+.rps-options {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.rps-option {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.rps-option img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.rps-option:hover {
+    transform: scale(1.1);
+}
+
+.rps-confirm {
+    all: unset;
+    padding: 20px 120px;
+    font-size: 48px;
+    font-weight: bold;
+    font-style: normal;
+    color: #ffffff;
+    background-color: #62C370;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.rps-confirm:hover {
+    transform: scale(1.1);
+    background-color: #94F2A1;
+}
+
+.exit-button {
+    all: unset;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #931F1D;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.exit-button:hover {
+    background-color: #FF5C59;
+}
